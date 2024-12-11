@@ -1,0 +1,121 @@
+.main-content {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.alerts-header {
+    margin-bottom: 2rem;
+}
+
+.alerts-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.alert-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.alert-card:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.alert-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.alert-header-content {
+    flex-grow: 1;
+}
+
+.alert-header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.alert-type {
+    font-weight: bold;
+    color: #ff4444;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.alert-details {
+    color: #888;
+    font-size: 0.95rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.alert-time {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.severity-high {
+    color: #ff4444;
+}
+
+.severity-medium {
+    color: #ffaa00;
+}
+
+.severity-low {
+    color: #44ff44;
+}
+
+.chevron {
+    color: #888;
+    transition: transform 0.3s ease;
+}
+
+.alert-expanded-content {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: none;
+}
+
+.alert-expanded-content.active {
+    display: block;
+}
+
+.info-group {
+    margin-bottom: 1.5rem;
+}
+
+.info-group:last-child {
+    margin-bottom: 0;
+}
+
+.info-label {
+    display: block;
+    color: #888;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+}
+
+.info-value {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    border-radius: 6px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    word-break: break-all;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
