@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pybit - Analyze and scan source code">
+    <title>Pybit</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+    <div class="background-effects">
+        <div class="glow-orb"></div>
+        <div class="glow-orb"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#" class="nav-logo">Pybit</a>
+            <div class="nav-links">
+                <a href="#" class="nav-link">Home</a>
+                <a href="api/docs.html" class="nav-link">Docs</a>
+                <a href="#" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="upload-container">
+            <h2 class="title">Pybit</h2>
+            <div class="tabs">
+                <button class="tab active">Partner</button>
+                <button class="tab">Source Code</button>
+            </div>
+
+            <div class="tab-content active" id="urls-panel">
+                <div class="upload-zone" id="dropZone">
+                    <div class="upload-icon">📁</div>
+                    <input type="file" id="fileInput" accept=".js,.html,.py,.java,.txt" />
+                    <p>Drop your file here or click to browse</p>
+                    <p class="subtitle">Supported files: .NET (exe), Python (.py), Batch (.bat)</p>
+                </div>
+
+                <div class="url-list">
+                    <a href="https://pybit.lol" class="url-link">pybit.lol</a>
+                </div>
+            </div>
+
+            <div class="tab-content" id="source-code-panel">
+                <div class="search-container">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Search for keywords..." />
+                    <span id="nearestWord" class="nearest-word"></span>
+                </div>
+                <div class="code-block">
+                    <pre><code id="sourceCodeDisplay">// Source code will be displayed here...</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="notification" class="notification">
+        File Sample Uploaded to developers
+        Check Src code if you uploaded a .py 
+        file or text file
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
