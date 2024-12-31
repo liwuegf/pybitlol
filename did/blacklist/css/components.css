@@ -1,0 +1,90 @@
+/* Stats Component */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    width: 100%;
+}
+
+.stat-box {
+    background-color: var(--accent-color);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    flex: 1;
+    max-width: 250px;
+    border: 1px solid var(--border-color);
+}
+
+.stat-label {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* Card Component */
+.card {
+    background: var(--accent-color);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Form Component */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--accent-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--primary-color);
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Button Component */
+.button {
+    padding: 1rem 2rem;
+    background: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px var(--glow-color);
+}

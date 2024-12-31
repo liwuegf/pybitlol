@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord ID - IP</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-wrapper">
+            <img src="logo.png" alt="Logo" class="logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="https://pybit.lol/blacklist/buy">Buy Blacklist</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="stats">
+            <div class="stat-box">
+                <p class="stat-label">1k+ Logs</p>
+            </div>
+            <div class="stat-box">
+                <p class="stat-label" id="blacklistCount">Blacklists 153</p>
+            </div>
+        </div>
+
+        <div class="search-wrapper">
+            <h1 class="title">ID TO IP</h1>
+            <div class="search-container">
+                <input type="text" id="logId" placeholder="Enter log ID..." class="search-input">
+                <button onclick="fetchLog()" class="search-button">Search</button>
+            </div>
+        </div>
+
+
+    <div id="notification" class="notification">
+        <div class="notification-content">
+            <div class="notification-header">
+                <h2>User Information</h2>
+                <button class="close-btn" onclick="closeNotification()">×</button>
+            </div>
+            <div id="logData" class="log-data"></div>
+        </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>

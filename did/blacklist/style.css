@@ -1,0 +1,176 @@
+:root {
+    --primary-color: #ffffff;
+    --background-color: #0a0a0a;
+    --accent-color: #1a1a1a;
+    --error-color: #ff4444;
+    --glow-color: rgba(255, 255, 255, 0.1);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --hover-color: rgba(255, 255, 255, 0.03);
+    --success-color: #00ff00;
+    --error-icon-color: #ff4444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    width: 100%;
+}
+
+.stat-box {
+    background-color: var(--accent-color);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    flex: 1;
+    max-width: 250px;
+    border: 1px solid var(--border-color);
+}
+
+.stat-label {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    opacity: 0.8;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.buy-blacklist-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+}
+
+.card {
+    background: var(--accent-color);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card-content {
+    margin-bottom: 2rem;
+}
+
+.card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.features {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.features li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.features i {
+    width: 20px;
+}
+
+.fa-check {
+    color: var(--success-color);
+}
+
+.fa-times {
+    color: var(--error-icon-color);
+}
+
+.buy-button {
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.buy-button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px var(--glow-color);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .stats {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .stat-box {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+}

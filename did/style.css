@@ -1,0 +1,299 @@
+:root {
+    --primary-color: #ffffff;
+    --background-color: #0a0a0a;
+    --accent-color: #1a1a1a;
+    --error-color: #ff4444;
+    --glow-color: rgba(255, 255, 255, 0.1);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --hover-color: rgba(255, 255, 255, 0.03);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6;
+}
+
+.navbar {
+    width: 100%;
+    background: var(--accent-color);
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.navbar .logo-wrapper img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .nav-links li {
+    list-style: none;
+}
+
+.navbar .nav-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: var(--glow-color);
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px; /* To avoid overlap with navbar */
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.stat-box {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 45%;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.stat-label {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.buy-blacklist-card {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.card {
+    background: var(--accent-color);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.buy-button {
+    padding: 1rem 2rem;
+    background: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.buy-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px var(--glow-color);
+    opacity: 0.9;
+}
+
+.search-wrapper {
+    background: var(--accent-color);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--border-color);
+    width: 100%;
+    max-width: 600px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+
+.search-container {
+    display: flex;
+    gap: 1rem;
+    animation: slideUp 0.5s ease-out 0.3s forwards;
+    opacity: 0;
+}
+
+.search-input {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    font-size: 1rem;
+    background: var(--background-color);
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--glow-color);
+}
+
+.search-button {
+    padding: 1rem 2rem;
+    background: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.search-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px var(--glow-color);
+    opacity: 0.9;
+}
+
+.notification {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(8px);
+}
+
+.notification.show {
+    display: flex;
+    opacity: 1;
+}
+
+.notification-content {
+    background: var(--accent-color);
+    padding: 2rem;
+    border-radius: 20px;
+    max-width: 90%;
+    width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: slideUpFade 0.3s ease-out forwards;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.notification-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.close-btn:hover {
+    opacity: 1;
+    transform: rotate(90deg);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.98); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUpFade {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
