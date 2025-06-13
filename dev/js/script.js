@@ -1,4 +1,4 @@
-// Mobile Navigation Toggle
+
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
@@ -8,14 +8,12 @@ if (hamburger && navMenu) {
         navMenu.classList.toggle('active');
     });
 
-    // Close mobile menu when clicking on a link
     document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
     }));
 }
 
-// Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -29,7 +27,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Navbar background change on scroll
+
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
@@ -39,7 +37,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Intersection Observer for animations
+
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -53,23 +51,20 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe elements for animation
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Add animation classes to elements
     const elementsToAnimate = document.querySelectorAll('.skill-category, .project-card, .contact-item, .stat');
     elementsToAnimate.forEach(el => {
         el.classList.add('fade-in');
         observer.observe(el);
     });
 
-    // Animate skill bars when they come into view
     const skillBars = document.querySelectorAll('.skill-progress');
     skillBars.forEach(bar => {
         observer.observe(bar);
     });
 });
 
-// Typing animation for hero code block
 const codeLines = document.querySelectorAll('.code-line');
 if (codeLines.length > 0) {
     codeLines.forEach((line, index) => {
@@ -77,17 +72,17 @@ if (codeLines.length > 0) {
     });
 }
 
-// Form submission handler
+
 const contactForm = document.querySelector('.contact-form form');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
-        // Get form data
+     
         const formData = new FormData(contactForm);
         const data = Object.fromEntries(formData);
         
-        // Simple form validation
+    
         const inputs = contactForm.querySelectorAll('input, textarea');
         let isValid = true;
         
@@ -101,7 +96,7 @@ if (contactForm) {
         });
         
         if (isValid) {
-            // Simulate form submission
+           
             const submitBtn = contactForm.querySelector('.btn-primary');
             const originalText = submitBtn.textContent;
             
@@ -122,7 +117,7 @@ if (contactForm) {
     });
 }
 
-// Parallax effect for floating shapes
+
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const parallaxElements = document.querySelectorAll('.shape');
@@ -134,7 +129,6 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Add hover effects to project cards
 document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('mouseenter', () => {
         card.style.transform = 'translateY(-10px) scale(1.02)';
@@ -145,7 +139,7 @@ document.querySelectorAll('.project-card').forEach(card => {
     });
 });
 
-// Add particle effect to hero section
+
 function createParticles() {
     const hero = document.querySelector('.hero');
     const particleCount = 50;
@@ -163,11 +157,11 @@ function createParticles() {
             z-index: 1;
         `;
         
-        // Random position
+  
         particle.style.left = Math.random() * 100 + '%';
         particle.style.top = Math.random() * 100 + '%';
         
-        // Random animation
+    
         particle.style.animation = `particle-float ${3 + Math.random() * 4}s linear infinite`;
         particle.style.animationDelay = Math.random() * 2 + 's';
         
@@ -175,7 +169,7 @@ function createParticles() {
     }
 }
 
-// Add particle animation keyframes
+
 const style = document.createElement('style');
 style.textContent = `
     @keyframes particle-float {
@@ -197,10 +191,10 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Initialize particles
+
 document.addEventListener('DOMContentLoaded', createParticles);
 
-// Add glitch effect to logo on hover
+
 const logo = document.querySelector('.logo-text');
 if (logo) {
     logo.addEventListener('mouseenter', () => {
@@ -212,7 +206,7 @@ if (logo) {
     });
 }
 
-// Add glitch animation
+
 const glitchStyle = document.createElement('style');
 glitchStyle.textContent = `
     @keyframes glitch {
